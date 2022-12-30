@@ -13,30 +13,26 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     });
   }
 
-  switch (method) {
-    case "GET": {
-      try {
-        const { blogId } = req.query;
-        const blog = await Blog.findById(blogId);
-        res.status(200).json(blog);
-      } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: "Произошла ошибка" });
-      }
+  if (method === "GET") {
+    try {
+      const { blogId } = req.query;
+      const blog = await Blog.findById(blogId);
+      res.status(200).json(blog);
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: "Произошла ошибка" });
     }
-    case "POST": {
-      try {
-        const { blogId } = req.query;
-        const updatedBlog: BlogInterface = req.body;
-        console.log(updatedBlog);
+  }
 
-        const blog = await Blog.findOneAndUpdate({ _id: blogId }, updatedBlog);
-        console.log(blog);
-        res.status(201).json(blog);
-      } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: "Произошла ошибка" });
-      }
+  if (method === "POST") {
+    try {
+      const { blogId } = req.query;
+      const updatedBlog: BlogInterface = req.body;
+      const blog = await Blog.findOneAndUpdate({ _id: blogId }, updatedBlog);
+      res.status(201).json(blog);
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: "Произошла ошибка" });
     }
   }
 };

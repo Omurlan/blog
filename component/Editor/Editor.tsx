@@ -28,7 +28,7 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ blog }) => {
 
   useEffect(() => {
     if (blog && blog !== null) {
-      console.log(blog);
+      // console.log(blog);
       const blocksFromHtml = htmlToDraft(blog.content);
       const { contentBlocks, entityMap } = blocksFromHtml;
       const contentState = ContentState.createFromBlockArray(
@@ -111,9 +111,8 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ blog }) => {
 
         <TextareaAutosize
           value={title}
-          minRows={2}
-          maxRows={5}
-          maxLength={120}
+          minRows={1}
+          maxLength={130}
           onChange={handleChangeTitle}
           className={cn(styles.input, styles.textarea, styles.title)}
           placeholder="Заголовок (макс. символов 120)"

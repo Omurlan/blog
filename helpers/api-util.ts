@@ -13,7 +13,7 @@ export const getBlogById = async (id: string) => {
 
   const blog = JSON.stringify(await Blog.findById(id));
 
-  console.log(blog);
+  // console.log(blog);
 
   return JSON.parse(blog);
 };

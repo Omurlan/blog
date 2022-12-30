@@ -33,6 +33,7 @@
   border: none;
   outline: none;
   resize: none;
+  overflow-y: hidden;
   box-shadow: 1px 1px 5px rgba(124, 124, 124, 0.23);
 }
 
