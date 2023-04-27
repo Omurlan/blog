@@ -1,0 +1,8 @@
+.direction {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.direction.column {
+  flex-direction: column;
+}

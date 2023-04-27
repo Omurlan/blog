@@ -1,0 +1,60 @@
+.rate {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  height: 20px;
+}
+
+.likeBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.likeBlock:hover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(180, 180, 180, 0.251);
+  width: 33px;
+  height: 33px;
+  border-radius: 20px;
+}
+
+.like {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.like.active {
+  color: black;
+  animation-duration: 1000ms;
+  animation-name: like-animation;
+  animation-timing-function: ease-in-out;
+}
+
+.count {
+  color: rgb(55, 55, 55);
+  font-size: 14px;
+}
+
+@keyframes like-animation {
+  0% {
+    transform: scale(0);
+  }
+  15% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  45%,
+  80% {
+    transform: scale(1);
+  }
+}

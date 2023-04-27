@@ -1,0 +1,7 @@
+.userIcon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px rgb(196, 196, 196);
+}

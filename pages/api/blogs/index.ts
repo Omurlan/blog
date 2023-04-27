@@ -1,55 +1,39 @@
-import connect, { IConnectStatus } from "../../../lib/connect";
-import { NextApiRequest, NextApiResponse } from "next";
-import Blog from "../../../models/Blog";
-import { BlogInterface } from "../../../interfaces/blog";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { IBlogReq } from '@interface/blog';
+import { Blog } from '@models';
+import connectDB from 'middleware/mongodb';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../auth/[...nextauth]';
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
 
-  // подключаем базу данных
-  const connectStatus: IConnectStatus = await connect();
-
-  // проверка подключения на успешность
-  if (!connectStatus.success) {
-    return res.status(500).json({
-      message: "Произошла ошибка на сервере. Повторите попытку позже",
-    });
-  }
-
-  // выполняем логику в зависимости от метода
-  if (method === "GET") {
+  if (method === 'GET') {
     try {
-      const blogs = await Blog.find({});
-      return res.status(200).json({ blogs });
+      const blogs = await Blog.find().sort({ _id: 1 });
+
+      res.status(200).json({ blogs });
     } catch (error) {
       console.log(error);
-      return res.status(500).json({
-        message: "Произошла ошибка, попробуйте позже",
-      });
+      res.status(500).json({ message: 'Произошла ошибка, попробуйте позже' });
     }
   }
 
-  if (method === "POST") {
+  // create a new blog
+  if (method === 'POST') {
     try {
-      const { title, preview, author, content }: BlogInterface = req.body;
-      const newBlog = {
-        title,
-        preview,
-        author,
-        content,
-      };
+      const newBlog: IBlogReq = req.body;
 
-      const blog = await Blog.create(newBlog);
+      const session = await getServerSession(req, res, authOptions);
 
-      // console.log(blog);
-      return res.status(201).json(blog);
+      const blog = await Blog.create({ ...newBlog, author: session?.user.id });
+
+      res.status(201).json(blog);
     } catch (error) {
       console.log(error);
-      return res.status(500).json({
-        message: "Не удалось сохранить",
-      });
+      res.status(500).json({ message: 'Не удалось сохранить. Попробуйте позже' });
     }
   }
-
-  res.status(404).json({ message: "Unsupported HTTP request" });
 };
+
+export default connectDB(handler);

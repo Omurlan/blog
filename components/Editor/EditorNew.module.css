@@ -1,0 +1,18 @@
+.container {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.title {
+   width: 100%;
+   border: none;
+   resize: none;
+   height: auto;
+   outline: none;
+}
+
+.editor {}
+
+.title::placeholder {
+    color: var(--gray);
+}

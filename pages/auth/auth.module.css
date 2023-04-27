@@ -1,0 +1,107 @@
+.wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 30px;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0px 0px 3px rgba(107, 107, 107, 0.29);
+  gap: 25px;
+}
+
+.title {
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  background: rgba(239, 239, 239, 0.7);
+  border: 1px solid var(--gray-light);
+  padding: 15px;
+  outline-color: #02a9f4;
+}
+
+.input::placeholder {
+  color: var(--gray);
+}
+
+.iconInput {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  border: 1px solid var(--gray-light);
+}
+
+.iconInput:focus-within {
+  outline: 2px solid #02a9f4;
+}
+
+.iconInput input {
+  outline: none;
+  border: none;
+}
+
+.icon {
+  cursor: pointer;
+  padding: 0 15px;
+  width: 50px;
+  margin-left: auto;
+  height: 100%;
+  background: rgba(239, 239, 239, 0.7);
+}
+
+.button {
+  padding: 15px;
+  border: none;
+  background: #02a9f4;
+  color: white;
+  cursor: pointer;
+}
+
+.button:active {
+  background: #019ae0;
+}
+
+.link {
+  color: blue;
+  margin-top: 20px;
+}
+
+.error {
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+  color: red;
+}
+
+.result {
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+  width: 100%;
+  padding: 0px;
+  color: white;
+  cursor: pointer;
+}
+
+.result.success {
+  color: rgba(0, 128, 0, 0.51);
+}
+
+.result.warning {
+  color: #faad2f;
+}

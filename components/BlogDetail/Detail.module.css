@@ -1,0 +1,29 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  /* background-color: white; */
+  /* gap: 10px; */
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.detail a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.detail [id]::before {
+  content: '';
+  display: block;
+  height: calc(var(--navbar-height) + 10px);
+  margin-top: calc(var(--navbar-height) * -1 - 10px);
+  visibility: hidden;
+}
+
+
+/* .content img {
+  margin: 20px 0;
+} */

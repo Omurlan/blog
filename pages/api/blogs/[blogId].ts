@@ -1,38 +1,34 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import connect from "../../../lib/connect";
-import Blog from "../../../models/Blog";
-import { BlogInterface } from "../../../interfaces/blog";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { IBlog } from '@interface/blog';
+import { Blog } from '@models';
+import connectDB from 'middleware/mongodb';
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
-  const connectStatus = await connect();
 
-  if (!connectStatus.success) {
-    return res.status(500).json({
-      message: "Произошла ошибка на сервере. Повторите попытку позже",
-    });
-  }
-
-  if (method === "GET") {
+  if (method === 'GET') {
     try {
       const { blogId } = req.query;
       const blog = await Blog.findById(blogId);
       res.status(200).json(blog);
     } catch (error) {
       console.log(error);
-      res.status(500).json({ message: "Произошла ошибка" });
+      res.status(500).json({ message: 'Произошла ошибка' });
     }
   }
 
-  if (method === "POST") {
+  // update blog by its id
+  if (method === 'PUT') {
     try {
       const { blogId } = req.query;
-      const updatedBlog: BlogInterface = req.body;
-      const blog = await Blog.findOneAndUpdate({ _id: blogId }, updatedBlog);
+      const updatedBlog: IBlog = req.body;
+      const blog = await Blog.findByIdAndUpdate(blogId, updatedBlog);
       res.status(201).json(blog);
     } catch (error) {
       console.log(error);
-      res.status(500).json({ message: "Произошла ошибка" });
+      res.status(500).json({ message: 'Произошла ошибка' });
     }
   }
 };
+
+export default connectDB(handler);

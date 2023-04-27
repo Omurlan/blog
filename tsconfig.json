@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "allowUmdGlobalAccess": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -13,8 +18,51 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@interface/*": [
+        "global/interfaces/*"
+      ],
+      "@models": [
+        "models/index.ts"
+      ],
+      "@layout/*": [
+        "layout/*"
+      ],
+      "@utils/*": [
+        "util/*"
+      ],
+      "@helpers/*": [
+        "helpers/*"
+      ],
+      "@libs/*": [
+        "lib/*"
+      ],
+      "@api/*": [
+        "store/services/*"
+      ],
+      "@redux-hook": [
+        "store/hooks.ts"
+      ],
+      "@slices/*": [
+        "store/slices/*"
+      ]
+    },
+    "typeRoots": []
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "*.d.ts",
+    "**/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "components/editorjs/Header/Header.js", "components/editorjs/Link/Link.js", "components/editorjs/Anchor/Anchor.jss"  ],
+  "exclude": [
+    "node_modules"
+  ],
+
 }

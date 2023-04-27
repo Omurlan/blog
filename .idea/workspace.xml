@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="59f9e8aa-9eff-4e60-ae7e-ec5dd566c35f" name="Changes" comment="Блочный редактор Editor.js, авторизация, комментарии">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BlogDetail/Detail.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BlogDetail/Detail.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BlogDetail/Header/Header.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BlogDetail/Header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BlogList/Item.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BlogList/List.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BlogList/List.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/AuthorLike/AuthorLike.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/AuthorLike/AuthorLike.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/Comments.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/Comments.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/Form/Form.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/Form/Form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/Like/Like.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/Like/Like.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/List/Item.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/List/Item.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/List/List.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/List/List.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Comments/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Editor/Editor.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Editor/EditorNew.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Editor/EditorNew.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Editor/tools.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Navbar/Navbar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserHeader/Avatar/Avatar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserHeader/Avatar/Avatar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserHeader/UserHeader.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserHeader/UserHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserProfile/Avatar/Avatar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserProfile/Avatar/Avatar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserProfile/Profile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserProfile/UserProfile.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/Anchor/Anchor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/Embed/Embed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/Embed/services.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/Header/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/ImageTool/ImageTool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/ImageTool/ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/ImageTool/uploader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/ImageTool/utils/dom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/ImageTool/utils/isPromise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/Link/Link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editorjs/Warning/Warning.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Button/Button.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Button/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Card/Card.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Card/Card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Direction/Direction.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Direction/Direction.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Options/Options.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Options/Options.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Typography/Typography.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Typography/Typography.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global/interfaces/blog.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global/interfaces/comment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global/interfaces/editor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global/interfaces/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/compress.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/parser.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/swr-fetcher.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/connectDb.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/editorPlugin/editor-image.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firebase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/mongodb.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Comment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/User.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/auth/next-auth.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/auth/signup.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/comments/[blogId].ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/comments/like/[commentId].ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/comments/pin/[blogId].ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/comments/single/[commentId].ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/comments/single/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/comments/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/openGraph.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/user/[userId].ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/auth/auth.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/auth/signin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/auth/signup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/blogs/[blogId]/edit.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/blogs/[blogId]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/blogs/create.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/blogs/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/profile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/routes/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/routes/routesData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prettier.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/emil.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/services/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/services/blogApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/services/commentApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/services/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/slices/blogSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/slices/commentSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blog.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/editorjs/anchor.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/editorjs/embed.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/editorjs/header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/editorjs/imageTool.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/editorjs/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/editorjs/link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/editorjs/warning.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/typography.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/variables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/staticPropsApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validation/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Blog/BlogItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/BlogList/Item.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Blog/BlogItem.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Blog/BlogList.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Blog/BlogList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/BlogDetail/BlogDetail.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/BlogDetail/BlogDetail.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Editor/CustomToolbar/ColorPicker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Editor/CustomToolbar/ColorPicker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Editor/Editor.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Editor/Editor.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Editor/Editor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Navbar/Navbar.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Navbar/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/UI/Button.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/UI/Button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/api-util.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/blog.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/connect.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Blog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/Blog.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/blogs/[blogId].ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/blogs/[blogId].ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/blogs/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/blogs/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog/[id].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog/edit/[blogId].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog/write.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blogs.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2KaJWsPcAT6PyF2YTMlX4pCb96q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/javascript/nextjs-blog&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\javascript\\nextjs-blog\\node_modules\\prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\javascript\\nextjs-blog\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59f9e8aa-9eff-4e60-ae7e-ec5dd566c35f" name="Changes" comment="" />
+      <created>1674206794553</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674206794553</updated>
+      <workItem from="1674206796456" duration="373000" />
+      <workItem from="1674222249167" duration="173000" />
+      <workItem from="1674222438016" duration="1359000" />
+      <workItem from="1674232024099" duration="9000" />
+      <workItem from="1674242679729" duration="4000" />
+      <workItem from="1674322478468" duration="44000" />
+      <workItem from="1674484512592" duration="38000" />
+      <workItem from="1674537264467" duration="242000" />
+      <workItem from="1676471826116" duration="27000" />
+      <workItem from="1682625328963" duration="876000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Блочный редактор Editor.js, авторизация, комментарии" />
+    <option name="LAST_COMMIT_MESSAGE" value="Блочный редактор Editor.js, авторизация, комментарии" />
+  </component>
+</project>

@@ -1,0 +1,38 @@
+.blog__paragraph {
+    font-size: var(--text);
+}
+
+.image-block {
+    padding: 10px 0;
+
+    &__image {
+        margin-bottom: 10px;
+        background: rgba(0, 0, 0, 0.06);
+
+        &-picture {
+            display: block;
+            margin: 0;
+            max-height: 400px;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__caption {
+        font-size: var(--caption);
+        color: var(--gray);
+    }
+}
+
+.blog__warning {
+    background-color: #FFFAD0;
+    padding: 0;
+    margin: 20px 0;
+    border-radius: 0 6px 6px 0;
+    border-left: 5px solid rgba(255, 166, 0, 0.478);
+
+    &-message {
+        font-size: var(--text);
+        padding: 10px;
+    }
+}

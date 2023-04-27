@@ -1,0 +1,17 @@
+:root {
+  /* colors */
+  --background-color: #eeeeee; 
+  --white: white;
+  --blue: #4683d9;
+  --gray: #707070;
+  --gray-light: rgb(218, 218, 218); 
+
+  /* text size */
+  --title: 24px;
+  --subtitle: 22px;
+  --text: 17px;
+  --caption: 15px;
+
+  /* measurments */
+  --navbar-height: 60px;
+}

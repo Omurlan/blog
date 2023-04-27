@@ -1,0 +1,127 @@
+.image-tool {
+  --bg-color: #cdd1e0;
+  --front-color: #388ae5;
+  --border-color: #e8e8eb;
+
+  font-size: var(--caption);
+
+  &__image {
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.06);
+
+      &-picture {
+        display: block;
+        width: 100%;
+        max-height: 400px;
+        object-fit: contain;
+      }
+
+      &-preloader {
+          display: block;
+          position: relative;
+          width: 100%;
+          max-height: 400px;
+          object-fit: contain;
+          margin: auto;
+          background-color: var(--bg-color);
+          animation: loading 0.8s infinite alternate;
+      }
+  }
+
+  &__caption {
+    color: var(--gray);
+      border: none;
+      box-shadow: none;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+  
+      &[contentEditable="true"][data-placeholder]::before {
+          position: absolute !important;
+          content: attr(data-placeholder);
+          color: #707684;
+          font-weight: normal;
+          display: none;
+      }   
+
+      &[contentEditable="true"][data-placeholder]:empty {
+          &::before {
+            display: block;
+          }
+    
+          &:focus::before {
+            display: none;
+          }
+        }
+  }
+
+  &--empty {
+      .image-tool__image {
+          display: none;
+      }
+  }
+
+  &--empty,
+  &--loading {
+      .image-tool__caption {
+          display: none;
+      }
+  }
+
+  .cdx-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+          height: auto;
+          margin: 0 6px 0 0;
+        }
+  }
+
+  &--filled {
+      .cdx-button {
+          display: none;
+      }
+
+      .image-tool__image-preloader {
+          display: none;
+      }
+  }
+
+  &--loading {
+      .image-tool__image {
+          min-height: 200px;
+          max-height: 400px;
+          display: flex;
+          border: 1px solid var(--border-color);
+          background-color: #fff;
+
+          &-picture {
+              display: none;
+          }
+      }
+
+      .cdx-button {
+          display: none;
+      }
+  }
+}
+
+@keyframes image-preloader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.8;;
+  }
+}

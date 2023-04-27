@@ -1,0 +1,7 @@
+.blogs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  /*box-shadow: 1px 3px 5px var(--gray-light);*/
+  background: var(--white);
+}

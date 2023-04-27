@@ -1,0 +1,23 @@
+.card {
+  padding: 15px 20px;
+  background: var(--white);
+}
+
+.card.pb {
+  padding-bottom: 0;
+}
+.card.pt {
+  padding-top: 0;
+}
+.card.pl {
+  padding-left: 0;
+}
+.card.pr {
+  padding-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatarAndInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.comment {
+  resize: none;
+  overflow-y: hidden;
+}
+
+.comment.edit {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.input::placeholder {
+  color: var(--gray);
+}
+
+.button {
+  /* margin-left: auto; */
+}

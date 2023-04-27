@@ -1,0 +1,36 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  gap: 5px;
+}
+
+.icon {
+  color: #f2c249;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.logout svg {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.created {
+  /*color: var(--gray);*/
+}
